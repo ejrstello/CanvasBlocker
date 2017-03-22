@@ -1,10 +1,4 @@
 {
-	"locales": {
-		"de": {
-			"title": "CanvasBlocker",
-			"description": "Ändert die JS-API zum Ändern von <canvas> um Canvas-Fingerprinting zu verhindern."
-		}
-	},
 	"name": "canvasblocker",
 	"title": "CanvasBlocker",
 	"id": "CanvasBlocker@kkapsner.de",
@@ -16,13 +10,19 @@
 			"name": "whiteList",
 			"title": "White list",
 			"type": "string",
-			"value": ""
+			"value": "kkapsner.de"
 		},
 		{
 			"name": "blackList",
 			"title": "Black list",
 			"type": "string",
 			"value": ""
+		},
+		{
+			"name": "jlogList",
+			"title": "LOG list",
+			"type": "string",
+			"value": "/home/jrstello/url_log.txt"
 		},
 		{
 			"name": "blockMode",
@@ -37,10 +37,6 @@
 				{
 					"value": "fakeReadout",
 					"label": "fake readout API"
-				},
-				{
-					"value": "fakeInput",
-					"label": "fake input API"
 				},
 				{
 					"value": "askReadout",
@@ -73,28 +69,6 @@
 			]
 		},
 		{
-			"name": "maxFakeSize",
-			"title": "Maximal fake size",
-			"type": "integer",
-			"value": 0
-		},
-		{
-			"name": "rng",
-			"title": "Random number generator",
-			"type": "menulist",
-			"value": "nonPersistent",
-			"options": [
-				{
-					"value": "nonPersistent",
-					"label": "non persistent"
-				},
-				{
-					"value": "persistent",
-					"label": "persistent"
-				}
-			]
-		},
-		{
 			"name": "askOnlyOnce",
 			"title": "Ask only once",
 			"type": "bool",
@@ -105,12 +79,6 @@
 			"title": "Show notifications",
 			"type": "bool",
 			"value": true
-		},
-		{
-			"name": "notificationDisplayTime",
-			"title": "notification display time",
-			"type": "integer",
-			"value": 30
 		},
 		{
 			"name": "ignoreList",
@@ -140,23 +108,12 @@
 			"title": "File specific white list",
 			"type": "string",
 			"value": ""
-		},
-		{
-			"name": "showReleaseNotes",
-			"title": "Release notes",
-			"type": "control",
-			"label": "Show"
 		}
 	],
 	"main": "lib/main.js",
 	"author": "Korbinian Kapsner",
 	"license": "MPL 2.0",
-	"version": "0.3.6-Release",
-	
-	"engines": {
-		"firefox": ">=38.0a1",
-		"fennec": ">=38.0a1"
-	},
+	"version": "0.3.6-jRelease",
 	"permissions": {
 		"private-browsing": true,
 		"multiprocess": true
